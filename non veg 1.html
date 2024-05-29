@@ -1,59 +1,107 @@
 <html>
     <head>
         <style>
-            p{font-size: 18px;font: border 5%;}
-            body{background-color: white;}
-            h2{color: rgb(221, 96, 87);}
-            .table1{width:90%; border: 5px;}
-            header{text-align:center;height: 50px;}
-            ul {
-            list-style-type: none;
-            font-size:15px;
-            margin: 10;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-            }
-            
-            li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            float: left;
-            }
-            
-            li a:hover {
-            background-color: hsl(2, 46%, 57%);
-            color:black;
-            }
-            .vedio {
-            background-color: #dbe6ff;
-            color: #111111;
-            cursor: pointer;
-            border: 5;
-            border-color: black;
-            padding: 8px;
-            margin: 10px;
-            width: 20%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            }
-            
-            .active, .vedio:hover {
-                color:white;
-            background-color: #555;
-            }
-            
-            .content {
-            padding: 30px;
-            display: none;
-            overflow: hidden;
-            background-color: hsl(0, 29%, 93%);
-            }
+            /* Base styles */
+p {
+    font-size: 18px;
+    font: border 5%;
+}
+
+body {
+    background-color: white;
+}
+
+h2 {
+    color: rgb(221, 96, 87);
+}
+
+.table1 {
+    width: 90%;
+    border: 5px;
+}
+
+header {
+    text-align: center;
+    height: 50px;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 15px;
+    margin: 10px; /* Added 'px' */
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Modified - Added media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    ul {
+        font-size: 13px;
+    }
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}
+
+li a:hover {
+    background-color: hsl(2, 46%, 57%);
+    color: black;
+}
+
+.vedio {
+    background-color: #dbe6ff;
+    color: #111111;
+    cursor: pointer;
+    border: 5;
+    border-color: black;
+    padding: 8px;
+    margin: 10px;
+    width: 20%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active,
+.vedio:hover {
+    color: white;
+    background-color: #555;
+}
+
+.content {
+    padding: 30px;
+    display: none;
+    overflow: hidden;
+    background-color: hsl(0, 29%, 93%);
+}
+
+/* Modified - Added media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .vedio {
+        width: 50%; /* Adjusted width for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .vedio {
+        width: 80%; /* Adjusted width for even smaller screens */
+    }
+}
+
             </style>
             
         <!-- <link rel = "stylesheet" href="C:\Users\manik\Desktop\html project\styles.css"> -->
