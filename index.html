@@ -1,139 +1,211 @@
 <html>
     <head>
-        
+        <style>
+            p { font-size: 18px; font: border 5%; }
+            body { background-color: white; }
+            h2 { color: rgb(221, 96, 87); }
+            .table1 { width: 90%; border: 5px; }
+            header { text-align: center; height: 50px; }
+            
+            ul {
+                list-style-type: none;
+                font-size: 15px;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+            
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                float: left;
+            }
+            
+            li a:hover {
+                background-color: hsl(2, 46%, 57%);
+                color: black;
+            }
+            
+            .vedio {
+                background-color: #dbe6ff;
+                color: #111111;
+                cursor: pointer;
+                border: 5px solid black;
+                padding: 8px;
+                margin: 10px;
+                width: 20%;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+            
+            .active, .vedio:hover {
+                color: white;
+                background-color: #555;
+            }
+            
+            .content {
+                padding: 30px;
+                display: none;
+                overflow: hidden;
+                background-color: hsl(0, 29%, 93%);
+            }
+            
+            .slideshow-container {
+                max-width: 100%;
+                position: relative;
+                margin: auto;
+            }
+            
+            .mySlides {
+                display: none;
+            }
+            
+            .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+            
+            @keyframes fade {
+                from { opacity: 0.4; } 
+                to { opacity: 1; }
+            }
+            
+            .dot {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+            
+            .active {
+                background-color: #717171;
+            }
+            
+            @media only screen and (max-width: 600px) {
+                .vedio {
+                    width: 100%;
+                    font-size: 12px;
+                }
+                
+                ul {
+                    font-size: 12px;
+                }
+                
+                li a {
+                    padding: 10px;
+                }
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                
+                table {
+                    width: 100%;
+                }
+                
+                td {
+                    display: block;
+                    text-align: center;
+                }
+                
+                h2 {
+                    font-size: 18px;
+                }
+            }
+            
+            @media only screen and (min-width: 601px) {
+                .vedio {
+                    width: 20%;
+                }
+                
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        </style>
     </head>
-    <style>
-      p{font-size: 18px;font: border 5%;}
-      body{background-color: white;}
-      h2{color: rgb(221, 96, 87);}
-      .table1{width:90%; border: 5px;}
-      header{text-align:center;height: 50px;
-      }
-      
-      ul {
-      list-style-type: none;
-      font-size:15px;
-      margin: 10;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-      }
-      
-      li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      float: left;
-      }
-      
-      li a:hover {
-      background-color: hsl(2, 46%, 57%);
-      color:black;
-      }
-      .vedio {
-      background-color: #dbe6ff;
-      color: #111111;
-      cursor: pointer;
-      border: 5;
-      border-color: black;
-      padding: 8px;
-      margin: 10px;
-      width: 20%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 15px;
-      }
-      
-      .active, .vedio:hover {
-          color:white;
-      background-color: #555;
-      }
-      
-      .content {
-      padding: 30px;
-      display: none;
-      overflow: hidden;
-      background-color: hsl(0, 29%, 93%);
-      }
-      </style>
     <body>
-            <ul>
-                <li><a href="desserts.html">Desserts</a></li>
-                <li><a href="salads.html">Salads</a></li>
-                <li><a href="veg 1.html">Veg</a></li>
-                <li><a href="non veg 1.html">Non-Veg</a></li>
+        <ul>
+            <li><a href="desserts.html">Desserts</a></li>
+            <li><a href="salads.html">Salads</a></li>
+            <li><a href="veg 1.html">Veg</a></li>
+            <li><a href="non veg 1.html">Non-Veg</a></li>
+        </ul>
+        <pre><span style="font-size:60px;">      𝐹𝑜𝑜𝒹 𝐵𝓁𝑜𝑔: </span></pre>
+        <hr size="2" width="70%" color="black">
+        <center>
+            <h2 style="Trebuchet MS"><b>Simple recipes made for <span style="color:red;"> <b>𝓇𝑒𝒶𝓁, 𝒶𝒸𝓉𝓊𝒶𝓁, 𝑒𝓋𝑒𝓇𝓎𝒹𝒶𝓎 𝓁𝒾𝒻𝔢</b></span></b></h2>
+        </center> 
+        <hr size="2" width="70%" color="black">
+        <pre><span style="font-size:35px;">      TOP RATED RECIPES:  </span></pre>
+        <div class="slideshow-container">
+            <center>
+                <div class="mySlides fade">
+                    <img src="https://i.ytimg.com/vi/ecM5vKL2lG8/maxresdefault.jpg" style="width:60%; height:auto;">
+                </div>
                 
-                </ul>
-                <pre><span style="font-size:60px;">      𝐹𝑜𝑜𝒹 𝐵𝓁𝑜𝑔: </span></pre>
-              <hr size="2"width="70%"color="black">
-              <center>
-              <h2 style="Trebuchet MS "><b>Simple recipes made for <span style="color:red;"> <b>𝓇𝑒𝒶𝓁, 𝒶𝒸𝓉𝓊𝒶𝓁, 𝑒𝓋𝑒𝓇𝓎𝒹𝒶𝓎 𝓁𝒾𝒻𝔢</b></span></b></h2> </center> 
-              <hr size="2"width="70%"color="black">
-              <pre><span style="font-size:35px; font-size: 27px;">      TOP RATED RECIPES:  </span></pre>
-              <div class="slideshow-container">
-                <center>
                 <div class="mySlides fade">
-                  <img src="https://i.ytimg.com/vi/ecM5vKL2lG8/maxresdefault.jpg" width="60%" height="60%">
-                </div>
-                
-                <div class="mySlides fade">
-                  <img src="https://i.ytimg.com/vi/CzLeY3p10vg/maxresdefault.jpg"  width="60%" height="60%">
+                    <img src="https://i.ytimg.com/vi/CzLeY3p10vg/maxresdefault.jpg" style="width:60%; height:auto;">
                 </div>
                 <div class="mySlides fade">
-                  <img src="https://i0.wp.com/ayurvedam365.com/wp-content/uploads/2022/05/mutton-fry.jpg?resize=1200%2C675&ssl=1"  width="60%" height="60%">
+                    <img src="https://i0.wp.com/ayurvedam365.com/wp-content/uploads/2022/05/mutton-fry.jpg?resize=1200%2C675&ssl=1" style="width:60%; height:auto;">
                 </div>
-                </center>
-                </div>
-                <br>
-                <div style="text-align:center">
-                  <span class="dot"></span> 
-                  <span class="dot"></span> 
-                  <span class="dot"></span> 
-                </div>     
-                <pre><span style="font-size:35px;font-size: 27px;">      PICK YOUR CHOICE:  </span></pre>
-                <center>
-          <table style ="width:76%">
-              <tr>
-                  <td><center><zoom><a href="veg 1.html"><img src="https://th.bing.com/th/id/OIP.T3IaHm4BijF0hCOIYognMQHaEo?pid=ImgDet&rs=1"width="200"height="200"></a></zoom></center></td>
-                  <td><center><zoom><a href="non veg 1.html"><img src="https://th.bing.com/th/id/OIP.w9mi1zQEufxW3oaf8eigTQHaFj?pid=ImgDet&rs=1"width="200"height="200"></a></zoom></center></td>
-                  <td><center><zoom><a href="desserts.html"><img src="https://th.bing.com/th/id/OIP.wKRQJ05rs1QSkGJQTooBEgAAAA?pid=ImgDet&w=300&h=300&rs=1"width="200"height="200"></a></zoom></center></td>
-                  <td><center><zoom><a href="salads.html"><img src="https://1.bp.blogspot.com/-IfGSuaTv_To/XKgbOxL-DPI/AAAAAAAAERo/cZoM2qlEwhQ_UVqfE-hkjUUy1Bw6iNHvgCLcBGAs/s1600/Vegetable%2BSalad%2BRecipes%2Bthat%2Bare%2Balso%2Bsuitable%2Bfor%2Ba%2BDiet.jpg"width="200"height="200"></a></zoom></center></td>
-              </tr>
-              <tr>
-                  <td><h2><center>Vegetarian</center></h2></td>
-                  <td><h2><center>Non vegetarian</center></h2></td>
-                  <td><h2><center>Desserts</center></h2></td>
-                  <td><h2><center>Salad</center></h2></td>
-              </tr></table>    
+            </center>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>     
+        <pre><span style="font-size:35px;">      PICK YOUR CHOICE:  </span></pre>
+        <center>
+            <table style="width:76%">
+                <tr>
+                    <td><center><a href="veg 1.html"><img src="https://th.bing.com/th/id/OIP.T3IaHm4BijF0hCOIYognMQHaEo?pid=ImgDet&rs=1" width="200" height="200"></a></center></td>
+                    <td><center><a href="non veg 1.html"><img src="https://th.bing.com/th/id/OIP.w9mi1zQEufxW3oaf8eigTQHaFj?pid=ImgDet&rs=1" width="200" height="200"></a></center></td>
+                    <td><center><a href="desserts.html"><img src="https://th.bing.com/th/id/OIP.wKRQJ05rs1QSkGJQTooBEgAAAA?pid=ImgDet&w=300&h=300&rs=1" width="200" height="200"></a></center></td>
+                    <td><center><a href="salads.html"><img src="https://1.bp.blogspot.com/-IfGSuaTv_To/XKgbOxL-DPI/AAAAAAAAERo/cZoM2qlEwhQ_UVqfE-hkjUUy1Bw6iNHvgCLcBGAs/s1600/Vegetable%2BSalad%2BRecipes%2Bthat%2Bare%2Balso%2Bsuitable%2Bfor%2Ba%2BDiet.jpg" width="200" height="200"></a></center></td>
+                </tr>
+                <tr>
+                    <td><h2><center>Vegetarian</center></h2></td>
+                    <td><h2><center>Non vegetarian</center></h2></td>
+                    <td><h2><center>Desserts</center></h2></td>
+                    <td><h2><center>Salad</center></h2></td>
+                </tr>
+            </table>    
         </center>
-    </span>
-    
-    <script>
-        let slideIndex = 0;
-        showSlides();
         
-        function showSlides() 
-        {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) 
-          {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          for (i = 0; i < dots.length; i++) 
-          {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 2000); 
-        }
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";  
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); 
+            }
         </script>
-        </body>
-    </html>
+    </body>
+</html>
